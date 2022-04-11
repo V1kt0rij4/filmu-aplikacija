@@ -25,21 +25,17 @@ public class FilmoPavadinimas {
     @OneToMany
     (mappedBy = "komentaroFilmas")
     Set<Komentaras> komentaras2;
-    private String pavadinimas;
 
 
+    public FilmoPavadinimas() {
+    }
 
-    public FilmoPavadinimas(long id, String filmas, String aprasymas, FilmuKategorija kategorija1, Set<Komentaras> komentaras2, String pavadinimas) {
+    public FilmoPavadinimas(long id, String filmas, String aprasymas, FilmuKategorija kategorija1, Set<Komentaras> komentaras2) {
         this.id = id;
         this.filmas = filmas;
         this.aprasymas = aprasymas;
-        kategorija1 = kategorija1;
+        this.kategorija1 = kategorija1;
         this.komentaras2 = komentaras2;
-        this.pavadinimas = pavadinimas;
-
-    }
-
-    public FilmoPavadinimas() {
     }
 
     public long getId() {
@@ -71,7 +67,7 @@ public class FilmoPavadinimas {
     }
 
     public void setKategorija1(FilmuKategorija kategorija1) {
-        kategorija1 = kategorija1;
+        this.kategorija1 = kategorija1;
     }
 
     public Set<Komentaras> getKomentaras2() {
@@ -88,10 +84,8 @@ public class FilmoPavadinimas {
                 "id=" + id +
                 ", filmas='" + filmas + '\'' +
                 ", aprasymas='" + aprasymas + '\'' +
-                ", Kategorija1=" + kategorija1 +
+                ", kategorija1=" + kategorija1 +
                 ", komentaras2=" + komentaras2 +
                 '}';
     }
-
-
 }

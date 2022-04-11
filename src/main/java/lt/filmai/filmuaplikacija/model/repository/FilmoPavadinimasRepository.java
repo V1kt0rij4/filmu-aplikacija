@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface FilmoPavadinimasRepository extends JpaRepository<FilmoPavadinimas, Integer> {
+public interface FilmoPavadinimasRepository extends JpaRepository<FilmoPavadinimas, Long> {
     FilmoPavadinimas findByFilmas(String pavadinimas);
 
 
