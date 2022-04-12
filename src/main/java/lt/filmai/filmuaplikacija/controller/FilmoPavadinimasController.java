@@ -27,6 +27,11 @@ public class FilmoPavadinimasController {
         return filmoPavadinimasRepository.findByFilmas(pavadinimas);
     }
 
+    @GetMapping("/filmai/paieska_id")
+    FilmoPavadinimas gautiPagalId1(@RequestParam long id) {
+        return filmoPavadinimasRepository.findById(id);
+    }
+
     @PostMapping("/filmai/ideti_filma")
     String idetiFilma(@RequestBody FilmoPavadinimas ivedamasFilmas) {
         filmoPavadinimasRepository.save(ivedamasFilmas);
