@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmai</title>
+
+    <title>Getting Started: Serving Web Content</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<table class="table table-striped">
+    <tr>
+        <th>Pavadinimas</th>
+        <td th:text="${filmas}"></td>
+    </tr>
+    <tr>
+        <th>Aprašymas:</th>
+        <td th:text="${aprasymas}"></td>
+    </tr>
+    <tr>
+        <th>IMDB įvertinimas:</th>
+        <td th:text="${ivertinimas}"></td>
+    </tr>
+    <tr>
+        <th>Kategorija:</th>
+        <td th:text="${filmuKategorija.getZanras()}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

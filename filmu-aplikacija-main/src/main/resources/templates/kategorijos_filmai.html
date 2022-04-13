@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kategorijų filmai</title>
+    <title>Getting Started: Serving Web Content</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<h2 th:text="${kategorijosPavadinimas}"></h2>
+<div th:each="filmas : ${kategorijosFilmai}" class="list-group">
+    <a th:text="${filmas.getKategorija1()}" th:ref=" @{/testinis/mvc/kategorijoss_filmai(pavadinimas=${filmas.getPavadinimas()})}" class="list-group-item list-group-item-action"></a>
+</div>
+
+</body>
+</html>
